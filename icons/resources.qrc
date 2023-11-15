@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource>
+    <file alias="create_new_file.png">create_new_file.png</file>
+    <file alias="create_new_dir.png">create_new_dir.png</file>
+    <file alias="copy.png">copy.png</file>
+    <file alias="cut.png">cut.png</file>
+    <file alias="delete.png">delete.png</file>
+    <file alias="edit_path.png">edit_path.png</file>
+    <file alias="find.png">find.png</file>
+    <file alias="move_back.png">move_back.png</file>
+    <file alias="move_up.png">move_up.png</file>
+    <file alias="move_forward.png">move_forward.png</file>
+    <file alias="move_to_my_computer.png">move_to_my_computer.png</file>
+    <file alias="open.png">open.png</file>
+    <file alias="paste.png">paste.png</file>
+    <file alias="rename.png">rename.png</file>
+    <file alias="settings.png">settings.png</file>
+    <file alias="user.png">user.png</file>
+</qresource>
+</RCC>
