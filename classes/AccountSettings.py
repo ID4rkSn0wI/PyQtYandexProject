@@ -8,6 +8,7 @@ from classes.ChangeLogin import ChangeLogin
 from classes.ChangePassword import ChangePassword
 from classes.EditPermissions import EditPermissions
 from ui.AccountSettingsUi import AccountSettingsUi
+from utils.relative_path import resource_path
 
 
 class AccountSettings(QMainWindow, AccountSettingsUi):
@@ -32,11 +33,11 @@ class AccountSettings(QMainWindow, AccountSettingsUi):
         self.showHideButton.clicked.connect(self.show_hide_password)
         self.logOutButton.clicked.connect(self.log_out)
         if user_name == 'admin' and user_password == 'admin':
-            self.image.setPixmap(QPixmap("images/admin.jpg").scaled(80, 80, Qt.KeepAspectRatio))
+            self.image.setPixmap(QPixmap(resource_path("admin.jpg")).scaled(80, 80, Qt.KeepAspectRatio))
             self.editPermissionsButton.show()
             self.editPermissionsButton.clicked.connect(self.edit_permissions)
         else:
-            self.image.setPixmap(QPixmap("images/user.jpg").scaled(80, 80, Qt.KeepAspectRatio))
+            self.image.setPixmap(QPixmap(resource_path("user.jpg")).scaled(80, 80, Qt.KeepAspectRatio))
         if edit:
             self.create_new.setEnabled(True)
             self.cut_copy_paste.setEnabled(True)

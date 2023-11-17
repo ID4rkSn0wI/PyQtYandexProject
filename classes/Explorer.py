@@ -19,6 +19,7 @@ from utils.parsePath import parse_path
 from utils.parsePathToDir import parse_path_to_dir
 from utils.parseToSend2Trash import parse_to_send2trash
 from utils.randomQuestionLine import random_question_line
+from utils.relative_path import resource_path
 from utils.returnIndexAndPath import return_index_and_path
 
 
@@ -447,7 +448,7 @@ class Explorer(QMainWindow, ExplorerUi):
         :return: None
         """
 
-        with open('saved_account.csv', 'w', encoding='utf-8') as file:
+        with open(resource_path('saved_account.csv'), 'w', encoding='utf-8') as file:
             pass
         self.set_up_settings()
 
@@ -478,7 +479,7 @@ class Explorer(QMainWindow, ExplorerUi):
         :return: None
         """
 
-        with open('saved_account.csv', 'r', encoding='utf-8') as file:
+        with open(resource_path('saved_account.csv'), 'r', encoding='utf-8') as file:
             reader = list(csv.reader(file, delimiter=';', quotechar='"'))
             if reader:
                 self.login = reader[0][0]
