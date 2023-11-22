@@ -42,7 +42,9 @@ class Registration(QMainWindow, RegistrationUi):
             else:
                 con = sqlite3.connect("users.sqlite")
                 cur = con.cursor()
-                cur.execute(f"INSERT INTO Users(login, password) VALUES({self.login.text()}, {self.password.text()})")
+                print(self.login.text(), self.password.text())
+                cur.execute(f"INSERT INTO Users(login, password) VALUES('{self.login.text()}',"
+                            f" '{self.password.text()}')")
                 con.commit()
                 con.close()
                 self.parent.login.setText(self.login.text())
